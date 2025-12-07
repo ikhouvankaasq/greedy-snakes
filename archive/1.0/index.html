@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greedy Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen active">
+        <div class="start-container">
+            <div class="logo-container">
+                <svg id="logo" width="400" height="120" viewBox="0 0 400 120">
+                    <!-- Money texture background -->
+                    <defs>
+                        <pattern id="moneyPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <circle cx="20" cy="20" r="15" fill="#FFD700" opacity="0.3"/>
+                            <text x="20" y="25" font-size="20" fill="#FFD700" text-anchor="middle" font-weight="bold">$</text>
+                        </pattern>
+                    </defs>
+                    <rect width="400" height="120" fill="url(#moneyPattern)"/>
+                    <text x="200" y="70" font-size="48" fill="#FFD700" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif" stroke="#000" stroke-width="2">Greedy Snake</text>
+                </svg>
+            </div>
+            
+            <div class="form-group">
+                <label for="playerName">Your Name:</label>
+                <input type="text" id="playerName" placeholder="Enter your name" maxlength="20">
+            </div>
+            
+            <div class="form-group">
+                <label>Map Theme:</label>
+                <div class="map-selector">
+                    <button class="map-option active" data-map="stars">
+                        <div class="map-preview stars-preview"></div>
+                        <span>Stars</span>
+                    </button>
+                    <button class="map-option" data-map="rainbow">
+                        <div class="map-preview rainbow-preview"></div>
+                        <span>Rainbow</span>
+                    </button>
+                    <button class="map-option disabled" data-map="coming-soon">
+                        <div class="map-preview coming-soon-preview"></div>
+                        <span>More Maps<br>Coming Soon</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Map Size:</label>
+                <div class="size-selector">
+                    <button class="size-option" data-size="small">Small</button>
+                    <button class="size-option active" data-size="normal">Normal</button>
+                    <button class="size-option" data-size="big">Big</button>
+                    <button class="size-option" data-size="huge">Huge</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Bot Difficulty:</label>
+                <div class="difficulty-selector">
+                    <button class="difficulty-option active" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-option" data-difficulty="normal">Normal</button>
+                    <button class="difficulty-option" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+            
+            <div class="money-display">
+                <div class="yellow-money">
+                    <span class="money-icon">💰</span>
+                    <span id="yellowMoneyCount">0</span>
+                </div>
+            </div>
+            
+            <button id="startButton" class="start-button">Start Game</button>
+        </div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="screen">
+        <div class="loading-container">
+            <div class="loading-snake">
+                <div class="snake-segment"></div>
+                <div class="snake-segment"></div>
+                <div class="snake-segment"></div>
+                <div class="snake-segment"></div>
+            </div>
+            <p class="loading-text">Loading Game...</p>
+        </div>
+    </div>
+    
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen">
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-ui">
+            <div class="money-counter">
+                <div class="green-money">
+                    <span class="money-icon">💵</span>
+                    <span id="greenMoneyCount">0</span>
+                </div>
+                <div class="yellow-money">
+                    <span class="money-icon">💰</span>
+                    <span id="yellowMoneyCountGame">0</span>
+                </div>
+            </div>
+            <div class="upgrade-panel">
+                <h3>Upgrades</h3>
+                <div class="upgrade-item">
+                    <span>Size (Lv <span id="sizeLevel">1</span>)</span>
+                    <button id="upgradeSize" class="upgrade-btn">Buy ($<span id="sizeCost">10</span>)</button>
+                </div>
+                <div class="upgrade-item">
+                    <span>Speed (Lv <span id="speedLevel">1</span>)</span>
+                    <button id="upgradeSpeed" class="upgrade-btn">Buy ($<span id="speedCost">10</span>)</button>
+                </div>
+                <div class="upgrade-item">
+                    <span>Multiplier (Lv <span id="multiplierLevel">1</span>)</span>
+                    <button id="upgradeMultiplier" class="upgrade-btn">Buy ($<span id="multiplierCost">10</span>)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
+
+
