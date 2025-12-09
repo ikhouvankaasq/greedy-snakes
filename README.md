@@ -6,7 +6,7 @@ There are some rare bot names this are all the current ones:
 Hog Rider = 0,001 % chance
 
 # ideas to add
-- If a snake dies they will drop there green coins!
+- If a snake dies they will drop there green coins!✅
 - add mods!✅
 - skins that you can buy with yellow coins! ✅
 - higher upgarde limits!✅
@@ -14,7 +14,7 @@ Hog Rider = 0,001 % chance
 - better logo✅
 - link to github✅
 - more maps
-- more sizes
+- more sizes✅
 - more difficulty bot
 # mod ideas
 - minions 5 max and there will go to enemies and kill them (upgrade) when one dies you can buy a new one
