@@ -1,12 +1,17 @@
 # greedy-snakes
 
+A fun game where you are a snake and need to collect money to buy upgrades and skins!
+
+There are some rare bot names this are all the current ones:
+Hog Rider = 0,001 % chance
+
 # ideas to add
 - If a snake dies they will drop there green coins!
 - add mods!
-- skins that you can buy with yellow coins!
+- skins that you can buy with yellow coins! ✅
 - higher upgarde limits!
-- remake start screen
-- better logo
+- remake start screen✅
+- better logo✅
 - link to github
 - more maps
 - more sizes
