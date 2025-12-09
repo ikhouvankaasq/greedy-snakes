@@ -9,7 +9,7 @@ Hog Rider = 0,001 % chance
 - If a snake dies they will drop there green coins!
 - add mods!✅
 - skins that you can buy with yellow coins! ✅
-- higher upgarde limits!
+- higher upgarde limits!✅
 - remake start screen✅
 - better logo✅
 - link to github✅
